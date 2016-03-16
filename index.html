@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <title> </title>
+    <script> 
+        var myArray = ["red","blue","purple","pink","green" ,"yellow", "coral"];
+        var colorIndex = 0
+        $(document).ready(function() {
+            $("#colorChange").click (colorChange); 
+        });
+         function colorChange (){
+             $("body").css("background-color", myArray[colorIndex]);
+              colorIndex= colorIndex+1
+              if (colorIndex ==myArray.length){
+                  colorIndex=0
+              }
+         }
+        </script>
+    </head>
+    <body>
+        <button id="colorChange">Change!</button>
+    </body>
+</html>
